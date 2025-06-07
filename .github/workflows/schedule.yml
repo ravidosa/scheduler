@@ -1,6 +1,7 @@
 name: Scheduler
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "50 15 * * 6"
 
