@@ -1,13 +1,14 @@
 name: Scheduler
 
 on:
-  workflow_dispatch:
   schedule:
     - cron: "50 15 * * 6"
+
 env:
-  - COOKIE: ${{ secrets.COOKIE }}
+  COOKIE: ${{ secrets.COOKIE }}
+
 jobs:
-  generate-pull-request:
+  schedule:
     name: schedule
     runs-on: ubuntu-latest
     steps:
