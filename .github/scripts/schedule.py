@@ -12,7 +12,6 @@ print(d)
 print(datetime.today() + timedelta((12 - d.weekday()) % 7))
 
 cookie = os.environ["COOKIE"]
-print(cookie)
 
 avail_dic = {"5AM": [7],
              "6AM": [7],
