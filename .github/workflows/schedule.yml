@@ -29,15 +29,5 @@ jobs:
           cache: 'pip' # caching pip dependencies
       - name: Install Python dependencies
         uses: py-actions/py-dependency-install@v4
-      - name: Debug environment variables
-        run: |
-          echo "Checking COOKIE environment variable..."
-          if [ -z "$COOKIE" ]; then
-            echo "❌ COOKIE is empty or not set"
-          else
-            echo "✅ COOKIE is set (length: ${#COOKIE})"
-          fi
-          echo "All environment variables starting with 'C':"
-          env | grep "^C" || echo "None found"
       - name: Run script
         run: python3 .github/scripts/schedule.py
