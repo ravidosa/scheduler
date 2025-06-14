@@ -11,6 +11,7 @@ d += t
 print(d)
 
 cookie = os.environ["COOKIE"]
+print(cookie)
 
 avail_dic = {3: [2, 3],
              4: [2, 3, 4, 5, 6, 7],
