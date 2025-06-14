@@ -4,7 +4,7 @@ import pause
 from datetime import datetime, timedelta
 from multiprocessing import Pool
 
-d = datetime.today().replace(hour=11, minute=10, second=0, microsecond=500)
+d = datetime.today().replace(hour=11, minute=13, second=0, microsecond=500)
 t = timedelta((12 - d.weekday()) % 7)
 d += t
 
@@ -24,7 +24,7 @@ def schedule(shift):
     hour, day = shift
     url = f"https://prv.tutor.com/nGEN/Tools/ScheduleManager_v2/SchedulerWorker.aspx?Type=Set&Week={d.month}/{d.day}/{d.year}&WeekDay={day}&Hour={hour}AM"
     x = requests.post(url, headers = {"Cookie": cookie})
-    #print(x.text)
+    print(x.headers)
 
 if __name__ == '__main__':
     pool = Pool()
