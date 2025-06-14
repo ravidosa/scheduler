@@ -5,13 +5,12 @@ on:
   schedule:
     - cron: "50 15 * * 6"
 
-env:
-  COOKIE: ${{ secrets.COOKIE }}
-
 jobs:
   schedule:
     name: schedule
     runs-on: ubuntu-latest
+    env:
+      COOKIE: ${{ secrets.COOKIE }}
     steps:
       - name: Check out repository to the runner
         uses: actions/checkout@v4
