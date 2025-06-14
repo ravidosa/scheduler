@@ -4,7 +4,7 @@ import pause
 from datetime import datetime, timedelta
 from multiprocessing import Pool
 
-d = datetime.today().replace(hour=11, minute=0, second=0, microsecond=500)
+d = datetime.today().replace(hour=11, minute=10, second=0, microsecond=500)
 t = timedelta((12 - d.weekday()) % 7)
 d += t
 
