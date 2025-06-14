@@ -24,7 +24,7 @@ def schedule(shift):
     hour, day = shift
     url = f"https://prv.tutor.com/nGEN/Tools/ScheduleManager_v2/SchedulerWorker.aspx?Type=Set&Week={d.month}/{d.day}/{d.year}&WeekDay={day}&Hour={hour}AM"
     x = requests.post(url, headers = {"Cookie": cookie})
-    print(x.text)
+    #print(x.text)
 
 if __name__ == '__main__':
     pool = Pool()
