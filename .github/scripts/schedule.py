@@ -4,23 +4,22 @@ import pause
 from datetime import datetime, timedelta
 from multiprocessing import Pool
 
-d = datetime.today().replace(hour=11, minute=0, second=0, microsecond=500)
+d = datetime.today().replace(hour=16, minute=0, second=0, microsecond=500)
 t = timedelta((12 - d.weekday()) % 7)
 d += t
 
 print(d)
-print(datetime.today() + timedelta((12 - d.weekday()) % 7))
 
 cookie = os.environ["COOKIE"]
 
-avail_dic = {"5AM": [7],
-             "6AM": [7],
-             "8AM": [4],
+avail_dic = {"3AM": [6],
+             "8AM": [6],
              "9AM": [2, 4, 5, 6],
-             "10AM": [2, 4, 5, 6],
-             "11AM": [4, 5],
-             "12PM": [3, 4, 5, 6, 7],
-             "1PM": [2, 3, 4, 5, 6]}
+             "10AM": [2, 4, 5, 6, 7],
+             "11AM": [4, 7],
+             "12PM": [2, 3, 4, 5, 7],
+             "1PM": [2, 3, 4, 5, 6, 7],
+             "2PM": [2, 3, 4, 5, 6]}
 
 def schedule(shift):
     hour, day = shift
