@@ -12,17 +12,13 @@ print(d)
 
 cookie = os.environ["COOKIE"]
 
-avail_dic = {"12AM": [3],
-             "1AM": [3],
-             "3AM": [1],
-             "4AM": [1],
-             "5AM": [1],
-             "6AM": [1],
-             "7PM": [5, 6],
-             "8PM": [5, 6],
-             "9PM": [2, 5, 6],
-             "10PM": [2, 5, 6],
-             "11PM": [2, 5, 6],}
+avail_dic = {"6PM": [4, 6],
+             "7PM": [4, 6],
+             "8PM": [4, 6],
+             "9PM": [4, 5, 6],
+             "10PM": [4, 5, 6],
+             "11PM": [4, 5, 6],
+             "12PM": [5, 6],}
 
 def schedule(shift):
     hour, day = shift
